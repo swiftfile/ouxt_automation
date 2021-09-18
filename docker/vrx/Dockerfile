@@ -13,7 +13,7 @@ ENV ROS_DISTRO $ROS1_DISTRO
 RUN rosdep update
 RUN source /opt/ros/$ROS1_DISTRO/setup.bash && rosdep install -y -i --from-paths . --ignore-src --rosdistro $ROS1_DISTRO
 RUN source /opt/ros/$ROS1_DISTRO/setup.bash && colcon build --symlink-install
-# COPY vrx.launch.py .
 COPY ./vrx_entrypoint.sh vrx_ws/
+COPY ./bridge.launch.py vrx_ws/
 
 ENTRYPOINT ["vrx_ws/vrx_entrypoint.sh"]

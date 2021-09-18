@@ -15,4 +15,4 @@ unset ROS_DISTRO
 source "/opt/ros/$ROS2_DISTRO/setup.bash"
 source "/vrx_ws/install/local_setup.bash"
 
-ros2 run ros1_bridge dynamic_bridge --bridge-all-topics
+ros2 launch vrx_ws/bridge.launch.py
