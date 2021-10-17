@@ -52,10 +52,12 @@ jobs:
           quaternion_operation,
           realsense_hardware_interface,
           robotx_behavior_tree,
+          robotx_bt_planner,
           robotx_ekf,
           scan_segmentation,
           sol_vendor,
           tcp_sender,
+          unisim_ros2_control,
           usv_controller,
         ]
     steps:
@@ -77,6 +79,12 @@ jobs:
       uses: OUXT-Polaris/setup-workflow-action@0.0.1
       with:
         template: /home/runner/templates/Release.yaml
+        project_path: ./
+        parameters: "{}"
+    - name: Deploy update workflow status workflow
+      uses: OUXT-Polaris/setup-workflow-action@0.0.1
+      with:
+        template: /home/runner/templates/UpdateWorkflowStatus.yaml
         project_path: ./
         parameters: "{}"
     - name: Check branch exist
