@@ -59,70 +59,70 @@ services:
       app_net:
         ipv4_address: 192.168.100.201
 
-  front_right_camera:
-    build:
-      context: .
-      dockerfile: perception_camera_mock/Dockerfile
-    privileged: true
-    container_name: front_right_camera
-    volumes: *volumes
-    ports:
-      - "202:22"
-    networks:
-      app_net:
-        ipv4_address: 192.168.100.202
+#   front_right_camera:
+#     build:
+#       context: .
+#       dockerfile: perception_camera_mock/Dockerfile
+#     privileged: true
+#     container_name: front_right_camera
+#     volumes: *volumes
+#     ports:
+#       - "202:22"
+#     networks:
+#       app_net:
+#         ipv4_address: 192.168.100.202
 
-  rear_left_camera:
-    build:
-      context: .
-      dockerfile: perception_camera_mock/Dockerfile
-    privileged: true
-    container_name: rear_left_camera
-    volumes: *volumes
-    ports:
-      - "203:22"
-    networks:
-      app_net:
-        ipv4_address: 192.168.100.203
+#   rear_left_camera:
+#     build:
+#       context: .
+#       dockerfile: perception_camera_mock/Dockerfile
+#     privileged: true
+#     container_name: rear_left_camera
+#     volumes: *volumes
+#     ports:
+#       - "203:22"
+#     networks:
+#       app_net:
+#         ipv4_address: 192.168.100.203
 
-  rear_right_camera:
-    build:
-      context: .
-      dockerfile: perception_camera_mock/Dockerfile
-    privileged: true
-    container_name: rear_right_camera
-    volumes: *volumes
-    ports:
-      - "204:22"
-    networks:
-      app_net:
-        ipv4_address: 192.168.100.204
+#   rear_right_camera:
+#     build:
+#       context: .
+#       dockerfile: perception_camera_mock/Dockerfile
+#     privileged: true
+#     container_name: rear_right_camera
+#     volumes: *volumes
+#     ports:
+#       - "204:22"
+#     networks:
+#       app_net:
+#         ipv4_address: 192.168.100.204
 
-  left_camera:
-    build:
-      context: .
-      dockerfile: perception_camera_mock/Dockerfile
-    privileged: true
-    container_name: left_camera
-    volumes: *volumes
-    ports:
-      - "205:22"
-    networks:
-      app_net:
-        ipv4_address: 192.168.100.205
+#   left_camera:
+#     build:
+#       context: .
+#       dockerfile: perception_camera_mock/Dockerfile
+#     privileged: true
+#     container_name: left_camera
+#     volumes: *volumes
+#     ports:
+#       - "205:22"
+#     networks:
+#       app_net:
+#         ipv4_address: 192.168.100.205
 
-  right_camera:
-    build:
-      context: .
-      dockerfile: perception_camera_mock/Dockerfile
-    privileged: true
-    container_name: right_camera
-    volumes: *volumes
-    ports:
-      - "206:22"
-    networks:
-      app_net:
-        ipv4_address: 192.168.100.206
+#   right_camera:
+#     build:
+#       context: .
+#       dockerfile: perception_camera_mock/Dockerfile
+#     privileged: true
+#     container_name: right_camera
+#     volumes: *volumes
+#     ports:
+#       - "206:22"
+#     networks:
+#       app_net:
+#         ipv4_address: 192.168.100.206
 
 networks:
   app_net:
