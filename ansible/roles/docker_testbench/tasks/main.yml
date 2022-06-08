@@ -33,6 +33,8 @@
     dest: ../docker/docker_testbench
     remote_src: false
   when: not check_image_exists.stat.exists
+- name : make directry mountpoint
+  file: path=../docker/docker_testbench/mount_point state=directory  
 
 - name: chmod image
   shell: chmod 777 ../docker/docker_testbench/mount_point
