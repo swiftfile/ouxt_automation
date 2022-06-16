@@ -38,6 +38,11 @@
   shell: chmod 777 ../docker/docker_testbench/mount_point
   become: true
 
+- name: make diretory to mount jetson image
+  file: 
+    path: "../docker/docker_testbench/mount_point"
+    state: directory 
+
 - name: mount jetson image
   become: true
   shell: mount -o offset=$((512*28672)) ../docker/docker_testbench/sd-blob-b01.img ../docker/docker_testbench/mount_point
